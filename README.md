@@ -25,16 +25,19 @@ Construir un pipeline completo de riesgo crediticio: desde el análisis explorat
 - **Control de versiones:** Git/GitHub
 
 ## 📁 Estructura del proyecto
-notebooks/
-├── 01_eda_npl_vintage.ipynb → EDA, NPL ratio, Vintage analysis
-├── 02_pd_model.ipynb → Modelo de Probability of Default (XGBoost vs Regresión Logística)
-├── 03_lgd_model.ipynb → Modelo de Loss Given Default
-├── 04_expected_loss.ipynb → Expected Loss del portafolio (PD × LGD × EAD)
-├── 05_pd_model_mejorado.ipynb → Feature Engineering aplicado al modelo de PD
-├── 06_stress_testing.ipynb → Stress testing con simulación Monte Carlo
-└── 07_api_bcra.ipynb → Integración con APIs externas
 
-monitor_brecha.py → Script de automatización (consumo de API + reglas de negocio)
+```text
+notebooks/
+├── 01_eda_npl_vintage.ipynb      → EDA, NPL ratio, Vintage analysis
+├── 02_pd_model.ipynb              → Modelo de Probability of Default (XGBoost vs Regresión Logística)
+├── 03_lgd_model.ipynb             → Modelo de Loss Given Default
+├── 04_expected_loss.ipynb         → Expected Loss del portafolio (PD × LGD × EAD)
+├── 05_pd_model_mejorado.ipynb     → Feature Engineering aplicado al modelo de PD
+├── 06_stress_testing.ipynb        → Stress testing con simulación Monte Carlo
+└── 07_api_bcra.ipynb              → Integración con APIs externas
+
+monitor_brecha.py                  → Script de automatización (consumo de API + reglas de negocio)
+```
 
 ## 🔑 Conceptos aplicados
 
