@@ -1,6 +1,6 @@
 # Modelo de Riesgo Crediticio con Machine Learning
 
-Proyecto end-to-end de riesgo crediticio aplicando Machine Learning, construido como práctica para aplicar a roles de Data Science / Risk Analytics en finanzas.
+Proyecto end-to-end de riesgo crediticio aplicando Machine Learning.
 
 **Dataset:** Lending Club (1.3M+ préstamos reales, EEUU, 2007-2018)
 
