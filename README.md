@@ -34,7 +34,7 @@ notebooks/
 ├── 04_expected_loss.ipynb         → Expected Loss del portafolio (PD × LGD × EAD)
 ├── 05_pd_model_mejorado.ipynb     → Feature Engineering aplicado al modelo de PD
 ├── 06_stress_testing.ipynb        → Stress testing con simulación Monte Carlo
-└── 07_api_bcra.ipynb              → Integración con APIs externas
+└── 07_consumo_apis.ipynb          → Consumo de APIs (DolarAPI) e intento documentado con la API del BCRA
 
 monitor_brecha.py                  → Script de automatización (consumo de API + reglas de negocio)
 ```
