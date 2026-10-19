@@ -16,8 +16,8 @@ Construir un pipeline completo de riesgo crediticio: desde el análisis explorat
 |---|---|
 | NPL Ratio | 2.36% |
 | AUC-ROC (modelo PD, XGBoost) | 0.7147 |
-| LGD promedio | 40.4% |
-| Expected Loss del portafolio | 8.71% |
+| LGD promedio | 46.7% |
+| Expected Loss del portafolio | 10.07% |
 | EL en estrés (percentil 99, Monte Carlo, sensibilidad macro supuesta) | +70% vs. escenario base |
 
 ## 🛠️ Stack técnico
@@ -39,6 +39,7 @@ notebooks/
 └── 07_api_consumption.ipynb     → Consumo de APIs (DolarAPI) y reglas de negocio
 
 pd_model_xgb.pkl                 → Modelo de PD entrenado (lo genera el notebook 02)
+lgd_by_grade.json                → LGD por grado (lo genera el notebook 03)
 fx_gap_monitor.py                → Script de automatización (consumo de API + reglas de negocio)
 ```
 
@@ -52,5 +53,5 @@ PD, LGD, EAD, Expected Loss, NPL, Vintage Analysis, Feature Engineering, AUC-ROC
 2. Crear y activar un entorno virtual: `python -m venv venv`
 3. Instalar las dependencias: `pip install pandas numpy scikit-learn xgboost matplotlib jupyter kaggle requests`
 4. Descargar el dataset de [Lending Club en Kaggle](https://www.kaggle.com/datasets/wordsforthewise/lending-club) en una carpeta `data/` en la raíz del proyecto (el archivo usado es `accepted_2007_to_2018Q4.csv.gz`). Con la CLI de Kaggle: `kaggle datasets download -d wordsforthewise/lending-club -p data`, y luego descomprimirlo.
-5. Correr los notebooks en orden (01 a 07). El notebook 02 guarda el modelo entrenado (`pd_model_xgb.pkl`), que cargan los notebooks 04 y 06.
+5. Correr los notebooks en orden (01 a 07). El notebook 02 guarda el modelo de PD (`pd_model_xgb.pkl`) y el notebook 03 guarda el LGD por grado (`lgd_by_grade.json`); los notebooks 04 y 06 cargan ambos.
 6. Opcional: ejecutar `python fx_gap_monitor.py` para correr el monitor de brecha cambiaria como script independiente.
